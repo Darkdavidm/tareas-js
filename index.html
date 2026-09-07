@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas App</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 30px auto; padding: 20px;}
+        .task-item { display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd; }
+        /* Clase dinámica para tareas completadas */
+        .completed span { text-decoration: line-through; color: gray; }
+        .filters { margin: 15px 0; display: flex; gap: 10px; }
+        button { cursor: pointer; padding: 5px 10px;}
+        input[type="text"] { padding: 5px; width: 60%; }
+    </style>
+</head>
+<body>
+    <h1>Mis Tareas</h1>
+    
+    <div>
+        <input type="text" id="taskInput" placeholder="Escribe una nueva tarea...">
+        <button id="addBtn">Agregar</button>
+    </div>
+
+    <!-- Botones de filtrado -->
+    <div class="filters">
+        <button id="btnAll">Mostrar todas</button>
+        <button id="btnPending">Pendientes</button>
+        <button id="btnCompleted">Completadas</button>
+    </div>
+
+    <!-- Contenedor dinámico -->
+    <ul id="taskList" style="list-style: none; padding: 0;"></ul>
+
+    <!-- El script principal se carga como módulo -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
